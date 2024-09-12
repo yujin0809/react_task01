@@ -1,0 +1,68 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item-l {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-sizing: border-box;
+            cursor: pointer;
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                transform: scale(1);
+                transition: 0.4s;
+            }
+        }
+        .profile {
+            width: 230px;
+            box-sizing: border-box;
+            p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            p:first-child {
+                font-size: 15px;
+                font-weight: 500;
+            }
+            p:last-child {
+                font-size: 13px;
+                color: #666;
+            }
+        }
+    }
+    .item-r {
+        display: flex;
+        gap: 6px;
+        button {
+            border: none;
+            background-color: #fff;
+            color: #dcdcdc;
+            font-size: 12px;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .sel:hover {
+            color: #000;
+        }
+        .del:hover {
+            color: #b00000;
+        }
+    }
+    &.on .sel {
+        color: #000;
+    }
+}
